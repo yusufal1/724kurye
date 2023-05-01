@@ -27,7 +27,7 @@ function Footer() {
 
         <div className="flex flex-col items-center text-white">
           <a href="/" className="py-2">
-            Fiyatlandırma
+            Deneme
           </a>
           <a href="/" className="py-2">
             Gizlilik Politikası
