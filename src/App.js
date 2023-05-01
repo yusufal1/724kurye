@@ -1,10 +1,12 @@
 import './App.css';
 import Homepage from './pages/Homepage';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className='w-[80%] mx-auto'>
+    <div className='mx-auto overflow-hidden'>
       <Homepage/>
+      <Footer/>
     </div>
   );
 }
