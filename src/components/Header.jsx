@@ -43,13 +43,13 @@ export default function Header() {
                   <a href="/">Ana Sayfa</a>
                 </li>
                 <li className="border-b border-gray-400 my-8 uppercase">
-                  <a href="/">Hakkımızda</a>
+                  <a href="/hakkimizda">Hakkımızda</a>
                 </li>
                 <li className="border-b border-gray-400 my-8 uppercase">
-                  <a href="/">Kurye Ol</a>
+                  <a href="/kurye-ol">Kurye Ol</a>
                 </li>
                 <li className="border-b border-gray-400 my-8 uppercase">
-                  <a href="/">İletişim</a>
+                  <a href="/iletisim">İletişim</a>
                 </li>
                 <li className=" bg-primary p-2 text-white rounded-lg  my-8 uppercase">
                   <a href="/">Kurye Çağır</a>
@@ -66,13 +66,13 @@ export default function Header() {
               <a href="/">Ana Sayfa</a>
             </li>
             <li>
-              <a href="/">Hakkımızda</a>
+              <a href="/hakkimizda">Hakkımızda</a>
             </li>
             <li>
-              <a href="/">Kurye</a>
+              <a href="/kurye-ol">Kurye Ol</a>
             </li>
             <li>
-              <a href="/">İletişim</a>
+              <a href="/iletisim">İletişim</a>
             </li>
             <li>
               <a href="/">İletişim</a>

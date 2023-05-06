@@ -3,9 +3,11 @@ import Header from "../components/Header";
 import arrowRight from "../assets/arrow-right-solid.svg";
 import img1 from "../assets/resim1.jpg";
 import payImg2 from '../assets/pay2.svg'
+import Footer from "../components/Footer";
 
 function Homepage() {
   return (
+    <>
     <div className="w-[80%] mx-auto">
       <Header />
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-20">
@@ -78,8 +80,9 @@ function Homepage() {
           />
         </div>
       </div>
-
     </div>
+    <Footer/>
+    </>
   );
 }
 

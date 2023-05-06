@@ -6,8 +6,8 @@ import twitter from "../assets/twitter.svg";
 
 function Footer() {
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-col py-5 md:flex-row justify-around bg-primary items-center">
+    <div>
+      <div className="flex flex-col py-5 md:flex-row justify-around bg-primary items-center mt-10">
         <div>
           <div className="flex flex-row justify-between mt-8 mb-5 space-x-5">
             <a href="/">
