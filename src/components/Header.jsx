@@ -52,7 +52,7 @@ export default function Header() {
                   <a href="/iletisim">İletişim</a>
                 </li>
                 <li className=" bg-primary p-2 text-white rounded-lg  my-8 uppercase">
-                  <a href="/">Kurye Çağır</a>
+                  <a href="/kurye-cagir">Kurye Çağır</a>
                 </li>
                 <li className=" bg-secondary p-2 text-white rounded-lg  my-8 uppercase">
                   <a href="/">Giriş Yap</a>
@@ -63,31 +63,28 @@ export default function Header() {
 
           <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
             <li>
-              <a href="/">Ana Sayfa</a>
+              <a href="/" className="whitespace-nowrap">Ana Sayfa</a>
             </li>
             <li>
-              <a href="/hakkimizda">Hakkımızda</a>
+              <a href="/hakkimizda" className="whitespace-nowrap">Hakkımızda</a>
             </li>
             <li>
-              <a href="/kurye-ol">Kurye Ol</a>
+              <a href="/kurye-ol" className="whitespace-nowrap">Kurye Ol</a>
             </li>
             <li>
-              <a href="/iletisim">İletişim</a>
-            </li>
-            <li>
-              <a href="/">İletişim</a>
+              <a href="/iletisim" className="whitespace-nowrap">İletişim</a>
             </li>
             <li>
               <a
-                className="bg-primary text-white rounded-lg px-2 py-1 mx-2"
-                href="/contact"
+                className="bg-primary whitespace-nowrap text-white rounded-lg px-2 py-1 mx-2"
+                href="/kurye-cagir"
               >
                 Kurye Çağır
               </a>
             </li>
             <li>
               <a
-                className="bg-secondary text-white rounded-lg px-2 py-1 mx-2"
+                className="bg-secondary whitespace-nowrap text-white rounded-lg px-2 py-1 mx-2"
                 href="/contact"
               >
                 Giriş Yap
