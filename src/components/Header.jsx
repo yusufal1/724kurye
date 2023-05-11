@@ -55,7 +55,7 @@ export default function Header() {
                   <a href="/kurye-cagir">Kurye Çağır</a>
                 </li>
                 <li className=" bg-secondary p-2 text-white rounded-lg  my-8 uppercase">
-                  <a href="/">Giriş Yap</a>
+                  <a href="/giris-yap">Giriş Yap</a>
                 </li>
               </ul>
             </div>
@@ -85,7 +85,7 @@ export default function Header() {
             <li>
               <a
                 className="bg-secondary whitespace-nowrap text-white rounded-lg px-2 py-1 mx-2"
-                href="/contact"
+                href="/giris-yap"
               >
                 Giriş Yap
               </a>
