@@ -7,9 +7,9 @@ function About() {
     <>
       <div className="w-[80%] mx-auto min-h-screen">
         <Header />
-        <div className="my-10 w-2/3 flex flex-col items-center mx-auto">
+        <div className="my-10 md:w-2/3 flex flex-col items-center mx-auto">
           <h1 className="md:text-5xl text-2xl font-bold">Hakkımızda</h1>
-          <p className="mt-10">
+          <p className="mt-10 md:text-base text-sm">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
             doloribus, quam fugiat officiis reiciendis voluptatum. A excepturi
             ad officia voluptatibus nisi animi quos itaque, eius, tempora sit

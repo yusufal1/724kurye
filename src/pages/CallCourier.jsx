@@ -48,9 +48,9 @@ function CallCourier() {
                   <img className="w-8 invert mx-auto" src={MotoIcon} alt="" />
                 </td>
                 <td class="px-6 py-4">
-                  <button className="bg-secondary rounded-lg px-4 py-2">
+                  <a href="/anlas" className="bg-secondary rounded-lg px-4 py-2">
                     Anlaş
-                  </button>
+                  </a>
                 </td>
               </tr>
 
@@ -67,9 +67,9 @@ function CallCourier() {
                   <img className="w-8 invert mx-auto" src={CarIcon} alt="" />
                 </td>
                 <td class="px-6 py-4">
-                  <button className="bg-secondary rounded-lg px-4 py-2">
+                <a href="/anlas" className="bg-secondary rounded-lg px-4 py-2">
                     Anlaş
-                  </button>
+                  </a>
                 </td>
               </tr>
 
@@ -86,9 +86,9 @@ function CallCourier() {
                   <img className="w-8 invert mx-auto" src={CarIcon} alt="" />
                 </td>
                 <td class="px-6 py-4">
-                  <button className="bg-secondary rounded-lg px-4 py-2">
+                <a href="/anlas" className="bg-secondary rounded-lg px-4 py-2">
                     Anlaş
-                  </button>
+                  </a>
                 </td>
               </tr>
             </tbody>

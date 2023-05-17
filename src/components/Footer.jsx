@@ -51,7 +51,7 @@ function Footer() {
 
       </div>
       <hr />
-      <p className="text-white bg-primary text-center py-5">© 2023 <a href="Homepage" className="underline">7/24 Kurye</a> Tüm Hakları Saklıdır</p>
+      <p className="text-white bg-primary text-center py-5">© 2023 <a href="/" className="underline">7/24 Kurye</a> Tüm Hakları Saklıdır</p>
     </div>
   );
 }

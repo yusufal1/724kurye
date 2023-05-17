@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       colors: {
         primary: '#eb5e28',
-        secondary: '#023047'
+        secondary: '#023047',
+        inputBg: '#D9D9D9'
       },
       fontFamily: {
         sans: ['Chivo Mono', 'monospace'],

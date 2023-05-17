@@ -5,6 +5,8 @@ import BeCourier from './pages/BeCourier';
 import Contact from './pages/Contact';
 import CallCourier from './pages/CallCourier';
 import LoginSignup from './pages/LoginSignup';
+import Agree from './pages/Agree';
+import Payment from './pages/Payment';
 import { Route, Routes, Link, NavLink } from "react-router-dom"
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
       <Route path='/iletisim' element={<Contact/>}/>
       <Route path='/kurye-cagir' element={<CallCourier/>}/>
       <Route path='/giris-yap' element={<LoginSignup/>}/>
+      <Route path='/anlas' element={<Agree/>}/>
+      <Route path='/odeme' element={<Payment/>}/>
     </Routes>
   );
 }
