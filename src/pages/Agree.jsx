@@ -8,8 +8,6 @@ import AvatarIcon from "../assets/avatar.jpg";
 import CreditCardIcon from '../assets/undraw_credit_card_re_blml.svg'
 
 function Agree() {
-  const [showPayment, setShowPayment] = useState(false)
-  const handleShowPayment = () => setShowPayment(true)
   return (
     <>
       <div className="md:w-[80%] mx-auto min-h-screen">
@@ -70,47 +68,18 @@ function Agree() {
               <input
                 className="bg-inputBg rounded-lg w-full text-sm"
                 type="text"
-                placeholder="Gönderi İçeriği (yemek, hediye, çiçek, diğer)"
+                placeholder="Ek İrtibat No"
               />
             </div>
             <hr />
             <div className="flex flex-col gap-2 p-4 border rounded-lg w-fit ml-10">
               <span className="font-semibold text-2xl">Toplam: 96.20₺</span>
-              <a href="#odeme-alani"
+              <a href="/odeme"
                 className="bg-primary rounded-lg px-8 py-2 w-fit"
-                onClick={handleShowPayment}
               >
                 Ödeme Yap
               </a>
             </div>
-            {
-              showPayment ? <div  className="mt-28 relative flex flex-col border border-white p-4 rounded-lg ">
-                <img id="odeme-alani" className="w-44 absolute top-[-7.5rem] right-3" src={CreditCardIcon} alt="" />
-                <h1 className="font-bold text-2xl mb-2">Ödeme</h1>
-                <hr/>
-                <div className="flex flex-col gap-4 mt-4 text-black">
-                  <input
-                    className="bg-inputBg rounded-lg w-full text-sm"
-                    type="text"
-                    placeholder="Kart Numarası"
-                  />
-                  <input
-                    className="bg-inputBg rounded-lg w-full text-sm"
-                    type="text"
-                    placeholder="Son Kullanma Tarihi"
-                  />
-                  <input
-                    className="bg-inputBg rounded-lg w-full text-sm"
-                    type="text"
-                    placeholder="CVC"
-                  />
-                </div>
-                <span className="font-semibold text-2xl mt-5">Toplam: 96.20₺</span>
-              <button className="bg-primary rounded-lg px-8 py-2 w-fit mt-3">
-                Ödeme Yap
-              </button>
-              </div> : null
-            }
             <div className="flex-flex-col space-y-4 ml-10 text-xs text-inputBg">
               <p>Fiyatlarımıza kdv dahildir.</p>
               <p>

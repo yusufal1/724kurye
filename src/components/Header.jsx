@@ -115,18 +115,3 @@ export default function Header() {
   );
 }
 
-// <div className='flex flex-row justify-between items-center font-sans sticky top-0 z-50 border-b-2 bg-white'>
-//   <div>
-//     <a href="Homepage"><img className='w-32' src={brandlogo} alt='brandlogo'/></a>
-//   </div>
-//   <div className='flex-grow flex justify-evenly'>
-//     <a className='hover:text-primary' href="/">Ana Sayfa</a>
-//     <a className='hover:text-primary' href="/">Hakkımızda</a>
-//     <a className='hover:text-primary' href="/">Kurye Ol</a>
-//     <a className='hover:text-primary' href="/">İletişim</a>
-//   </div>
-//   <div className='flex'>
-//     <button className='bg-primary text-white rounded-lg px-2 py-1 mx-2'>Kurye Çağır</button>
-//     <button className='bg-secondary text-white rounded-lg px-2 py-1 mx-2'>Giriş Yap</button>
-//   </div>
-// </div>

@@ -36,9 +36,11 @@ function LoginSignup() {
           <Header />
           <div className="bg-[#D9D9D9] p-5 mt-20 md:w-1/2 rounded-lg mx-auto drop-shadow-lg">
             <div>
-              <h1 className="font-bold text-2xl">GİRİŞ YAP</h1>
+              
               {!isRegisterButtonClicked && (
-                <div className="flex flex-row mt-10 drop-shadow-lg">
+                <div className="flex flex-col">
+                  <h1 className="font-bold text-2xl">GİRİŞ YAP</h1>
+                  <div className="flex flex-row mt-10 drop-shadow-lg">
                   <button
                     className={`bg-${
                       isCustomerButtonClicked ? 'primary' : 'white'
@@ -56,13 +58,20 @@ function LoginSignup() {
                     KURYE
                   </button>
                 </div>
+                </div>
               )}
               {isRegisterButtonClicked ? (
                 <div className="flex flex-col gap-7 mt-10">
+                  <h1 className="font-bold text-2xl">Kayıt Ol</h1>
                   <input
                     type="text"
                     className="text-black rounded-lg border-none focus:outline-none"
-                    placeholder="Ad Soyad"
+                    placeholder="Ad"
+                  />
+                  <input
+                    type="text"
+                    className="text-black rounded-lg border-none focus:outline-none"
+                    placeholder="Soyad"
                   />
                   <input
                     type="tel"

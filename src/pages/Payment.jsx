@@ -42,7 +42,7 @@ function Payment() {
       <div className="sm:w-[80%] mx-auto min-h-screen">
         <Header />
         <div className="flex xl:flex-row flex-col mt-20 border rounded-lg drop-shadow-lg">
-          <div className="basis-1/3 bg-secondary flex items-center justify-center">
+          <div className="basis-1/3 xl:rounded-l-lg bg-gradient-to-r from-purple-600 to-purple-800 flex items-center justify-center">
             <div className="flex flex-col m-5 rounded-lg drop-shadow-lg h-[180px] w-[330px] bg-gradient-to-r from-cyan-500 to-blue-500 p-4">
               <img
                 className="bg-transparent h-[35px] w-[45px] mt-10"

@@ -7,6 +7,8 @@ import CallCourier from './pages/CallCourier';
 import LoginSignup from './pages/LoginSignup';
 import Agree from './pages/Agree';
 import Payment from './pages/Payment';
+import OrderRequests from './pages/kurye-panel/OrderRequests';
+import ActiveOrders from './pages/kurye-panel/ActiveOrders';
 import { Route, Routes, Link, NavLink } from "react-router-dom"
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
       <Route path='/giris-yap' element={<LoginSignup/>}/>
       <Route path='/anlas' element={<Agree/>}/>
       <Route path='/odeme' element={<Payment/>}/>
+      <Route path='/siparis-istekleri' element={<OrderRequests/>}/>
+      <Route path='/aktif-siparisler' element={<ActiveOrders/>}/>
     </Routes>
   );
 }
