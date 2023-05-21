@@ -54,8 +54,8 @@ export default function Header() {
               <li className="border-b border-gray-400 my-8 uppercase">
                 <a href="/aktif-siparisler">Aktif Siparişlerim</a>
               </li>
-              <li className="border-b border-gray-400 my-8 uppercase text-primary">
-                <span>Durum: Çevrim içi</span>
+              <li className="border-b border-gray-400 my-8 uppercase">
+                <span>Durum: {isOnline ? <span className="text-[#59FF00]">Çevrim içi</span> : <span className="text-[#DD1515]">Çevrim Dışı</span> }</span>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase flex flex-col">
                 <p>
@@ -63,12 +63,12 @@ export default function Header() {
                 </p>
                 <div className="flex flex-row">
                   <li>
-                    <button className="border border-[#24FF00] text-[#24FF00] rounded-lg px-8 bg-[#D9D9D9]">
+                    <button onClick={handleOnline} className="border border-[#24FF00] text-[#24FF00] rounded-lg px-8 bg-[#D9D9D9]">
                       Açık
                     </button>
                   </li>
                   <li>
-                    <button className="border border-[#DD1515] text-[#DD1515] rounded-lg px-5 bg-[#D9D9D9]">
+                    <button onClick={handleOffline} className="border border-[#DD1515] text-[#DD1515] rounded-lg px-5 bg-[#D9D9D9]">
                       Kapalı
                     </button>
                   </li>
