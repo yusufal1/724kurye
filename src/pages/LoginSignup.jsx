@@ -163,12 +163,15 @@ function LoginSignup() {
               <button className="bg-secondary rounded-lg py-2 text-white">
                 Kayıt Ol
               </button>
+              <span className="text-right">
+                Hesabın var mı?
               <button
                 onClick={handleLoginButtonClick}
-                className="text-primary underline text-right"
+                className="text-primary underline ml-2"
               >
                 Giriş Yap
               </button>
+              </span>
             </div>
           )}
         </div>
