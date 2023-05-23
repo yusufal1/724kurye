@@ -1,7 +1,33 @@
 import React from 'react'
 import CourierHeader from '../../components/CourierHeader'
+import Modal from "react-modal";
+import SuccesImg from '../../assets/undraw_completed_steps_re_h9wc.svg'
+import TickSvg from '../../assets/accept-icon.svg'
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
+
+Modal.setAppElement("#root");
 
 function ActiveOrders() {
+
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
   return (
     <>
     <div className="w-[80%] mx-auto">
@@ -24,7 +50,7 @@ function ActiveOrders() {
                 <p><span className='text-secondary'>Varış Noktası:</span> Çakmak Mah. Gençtürk Sk. No:36 D:2 Ümraniye / İstanbul</p>
               </div>
           </div>
-          <button className='bg-secondary text-white px-8 py-2 w-fit mt-5 rounded-lg ml-auto'>Teslim Edildi</button>
+          <button onClick={openModal} className='bg-secondary text-white px-8 py-2 w-fit mt-5 rounded-lg ml-auto'>Teslim Edildi</button>
         </div>
         <div className="flex flex-col border border-white p-3 rounded-lg">
           <div className='flex md:flex-row flex-col justify-between gap-5'>
@@ -41,10 +67,23 @@ function ActiveOrders() {
                 <p><span className='text-secondary'>Varış Noktası:</span> Çakmak Mah. Gençtürk Sk. No:36 D:2 Ümraniye / İstanbul</p>
               </div>
           </div>
-          <button className='bg-secondary text-white px-8 py-2 w-fit mt-5 rounded-lg ml-auto'>Teslim Edildi</button>
+          <button onClick={openModal} className='bg-secondary text-white px-8 py-2 w-fit mt-5 rounded-lg ml-auto'>Teslim Edildi</button>
         </div>
       </div>
     </div>
+    <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <div className="flex flex-col sm:w-[500px] w-[320px]">
+          <button onClick={closeModal} className='font-bold ml-auto'>X</button>
+          <img className='w-[50%] mx-auto' src={SuccesImg} alt="" />
+          <img className='w-20 mx-auto mt-5' src={TickSvg} alt="" />
+          <h1 className='text-[#3AAF3C] font-bold text-center text-3xl mt-5'>Teslimat Başarılı</h1>
+        </div>
+      </Modal>
   </>
   )
 }

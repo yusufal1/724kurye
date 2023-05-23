@@ -14,7 +14,7 @@ export default function Header() {
   }
   return (
     <div className="flex items-center justify-between border-b border-gray-400 py-8">
-      <a href="Homepage">
+      <a href="/">
         <img className="w-32" src={brandlogo} alt="brandlogo" />
       </a>
       <nav>

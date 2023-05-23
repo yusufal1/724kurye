@@ -1,11 +1,11 @@
-import { useState } from "react"; // import state
+import { useState } from "react";
 import brandlogo from "../assets/brandlogo.png";
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
 
   return (
       <div className="flex items-center justify-between border-b border-gray-400 py-8">
-        <a href="Homepage">
+        <a href="/">
           <img className="w-32" src={brandlogo} alt="brandlogo" />
         </a>
         <nav>
