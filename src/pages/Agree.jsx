@@ -1,11 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import GiftIcon from "../assets/gifts-solid (1).svg";
 import LocationIcon from "../assets/location-dot-solid (1).svg";
 import PhoneIcon from "../assets/phone-solid.svg";
 import AvatarIcon from "../assets/avatar.jpg";
-import CreditCardIcon from '../assets/undraw_credit_card_re_blml.svg'
 
 function Agree() {
   return (

@@ -20,7 +20,6 @@ function LoginSignup() {
   const [isCustomerButtonClicked, setCustomerButtonClicked] = useState(true);
   const [isCourierButtonClicked, setCourierButtonClicked] = useState(false);
   const [isRegisterButtonClicked, setRegisterButtonClicked] = useState(false);
-  const [isLogginButtonClicked, setIsLogginButtonClicked] = useState(false);
 
   const handleCustomerButtonClick = () => {
     setCustomerButtonClicked(true);
