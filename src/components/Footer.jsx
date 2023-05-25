@@ -26,13 +26,13 @@ function Footer() {
         </div>
 
         <div className="flex flex-col items-center text-white">
-          <a href="/" className="py-2">
-            Fiyatlandırma
+          <a href="/cerez-politikasi" className="py-2">
+            Çerez Politikası
           </a>
-          <a href="/" className="py-2">
+          <a href="/gizlilik-politikasi" className="py-2">
             Gizlilik Politikası
           </a>
-          <a href="/" className="py-2">
+          <a href="/hakkimizda" className="py-2">
             Hakkımızda
           </a>
         </div>
@@ -41,10 +41,10 @@ function Footer() {
           <a href="/" className="py-2">
             Yardım Merkezi
           </a>
-          <a href="/" className="py-2">
+          <a href="/iletisim" className="py-2">
             İletişim
           </a>
-          <a href="/" className="py-2">
+          <a href="/kurye-ol" className="py-2">
             Kurye Ol
           </a>
         </div>

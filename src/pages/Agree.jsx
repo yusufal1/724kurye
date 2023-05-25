@@ -102,7 +102,6 @@ function Agree() {
             </h1>
             <img className="rounded-full w-20" src={AvatarIcon} alt="" />
             <span className="font-semibold">Yusuf AL</span>
-            <span className="text-xs">1.68km uzaklıkta</span>
             <div className="flex flex-col mt-5">
               <span className="font-semibold">Başarılı İşlem Sayısı</span>
               <span className="text-center text-[#24FF00] font-bold text-3xl">

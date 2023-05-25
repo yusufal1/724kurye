@@ -94,10 +94,8 @@ function BeCourier() {
               type="text"
             />
             <select name="region" id="region" className="bg-[#D9D9D9] text-[#9CA3AF] px-4 py-2 rounded-lg border-none focus:outline-none">
-                <option value="1" disabled selected>Bölge</option>
-                <option value="2">İstanbul</option>
-                <option value="3">Ankara</option>
-                <option value="4">İzmir</option>
+                <option value="1" disabled>Bölge</option>
+                <option value="2" selected>İstanbul</option>
             </select>
             <input
               className="bg-[#D9D9D9] px-4 py-2 rounded-lg border-none focus:outline-none"

@@ -10,13 +10,13 @@ function Homepage() {
     <>
     <div className="w-[80%] mx-auto">
       <Header />
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-20">
+      <div className="flex flex-col md:flex-row gap-5 justify-between items-start md:items-center mt-20">
         <div className="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8">
           <p className="font-semibold text-3xl md:text-5xl">
             KAYIT OL VE HEMEN KULLANMAYA BAŞLA
           </p>
           <a
-            href="/"
+            href="/giris-yap"
             className="flex items-center bg-primary px-4 py-2 rounded-lg text-white font-semibold w-fit mt-4 md:mt-8"
           >
             Hemen Başlayın
@@ -32,7 +32,7 @@ function Homepage() {
         </div>
       </div>
 
-      <div className="flex flex-col-reverse md:flex-row justify-between items-start md:items-center mt-20">
+      <div className="flex flex-col-reverse gap-5 md:flex-row justify-between items-start md:items-center mt-20">
         <div className="flex-shrink-0">
           <img
             src={img1}
@@ -57,7 +57,7 @@ function Homepage() {
           </p>
         </div>
         <div className="md:w-1/4 md:ml-10 mt-5 md:mt-0">
-          <a href="/" className="bg-white rounded-lg px-3 py-2 block text-center">
+          <a href="/kurye-ol" className="bg-white rounded-lg px-3 py-2 block text-center">
             Buradan Başvurabilirsiniz
           </a>
         </div>

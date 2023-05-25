@@ -9,7 +9,9 @@ import Agree from './pages/Agree';
 import Payment from './pages/Payment';
 import OrderRequests from './pages/kurye-panel/OrderRequests';
 import ActiveOrders from './pages/kurye-panel/ActiveOrders';
-import { Route, Routes, Link, NavLink } from "react-router-dom"
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import CookiePolicy from './pages/CookiePolicy';
+import { Route, Routes} from "react-router-dom"
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
       <Route path='/odeme' element={<Payment/>}/>
       <Route path='/siparis-istekleri' element={<OrderRequests/>}/>
       <Route path='/aktif-siparisler' element={<ActiveOrders/>}/>
+      <Route path='/gizlilik-politikasi' element={<PrivacyPolicy/>}/>
+      <Route path='/cerez-politikasi' element={<CookiePolicy/>}/>
     </Routes>
   );
 }

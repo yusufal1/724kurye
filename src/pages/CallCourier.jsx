@@ -24,9 +24,6 @@ function CallCourier() {
                   Durum
                 </th>
                 <th scope="col" class="px-6 py-3">
-                  Uzaklık
-                </th>
-                <th scope="col" class="px-6 py-3">
                   Araç Tipi
                 </th>
                 <th scope="col" class="px-6 py-3">
@@ -43,7 +40,6 @@ function CallCourier() {
                 <td class="px-6 py-4">
                     <span className="text-[#49dd50] font-bold">Çevrim içi</span>
                 </td>
-                <td class="px-6 py-4">1.68km</td>
                 <td class="px-6 py-4">
                   <img className="w-8 invert mx-auto" src={MotoIcon} alt="" />
                 </td>
@@ -62,7 +58,6 @@ function CallCourier() {
                 <td class="px-6 py-4">
                     <span className="text-[#7c1d1d] font-bold">Çevrim dışı</span>
                 </td>
-                <td class="px-6 py-4">2.44km</td>
                 <td class="px-6 py-4">
                   <img className="w-8 invert mx-auto" src={CarIcon} alt="" />
                 </td>
@@ -81,7 +76,6 @@ function CallCourier() {
                 <td class="px-6 py-4">
                     <span className="text-[#49dd50] font-bold">Çevrim içi</span>
                 </td>
-                <td class="px-6 py-4">3.21km</td>
                 <td class="px-6 py-4">
                   <img className="w-8 invert mx-auto" src={CarIcon} alt="" />
                 </td>
