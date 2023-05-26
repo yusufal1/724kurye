@@ -38,8 +38,8 @@ function Footer() {
         </div>
 
         <div className="flex flex-col items-center text-white">
-          <a href="/" className="py-2">
-            Yardım Merkezi
+          <a href="/sikca-sorulan-sorular" className="py-2">
+            Sıkça Sorulan Sorular
           </a>
           <a href="/iletisim" className="py-2">
             İletişim

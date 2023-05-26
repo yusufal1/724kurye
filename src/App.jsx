@@ -11,6 +11,7 @@ import OrderRequests from './pages/kurye-panel/OrderRequests';
 import ActiveOrders from './pages/kurye-panel/ActiveOrders';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import CookiePolicy from './pages/CookiePolicy';
+import Faq from './pages/Faq';
 import { Route, Routes} from "react-router-dom"
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <Route path='/aktif-siparisler' element={<ActiveOrders/>}/>
       <Route path='/gizlilik-politikasi' element={<PrivacyPolicy/>}/>
       <Route path='/cerez-politikasi' element={<CookiePolicy/>}/>
+      <Route path='/sikca-sorulan-sorular' element={<Faq/>}/>
     </Routes>
   );
 }

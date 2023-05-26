@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import GiftIcon from "../assets/gifts-solid (1).svg";
 import LocationIcon from "../assets/location-dot-solid (1).svg";
-import PhoneIcon from "../assets/phone-solid.svg";
 import AvatarIcon from "../assets/avatar.jpg";
 
 function Agree() {
@@ -27,11 +26,16 @@ function Agree() {
             <div className="flex flex-col">
               <div className="flex flex-row gap-2">
                 <img className="invert w-8" src={LocationIcon} alt="" />
-                <input
+                <select
                   className="bg-inputBg rounded-lg w-full text-sm"
                   type="text"
-                  placeholder="Çıkış Noktası (İl, İlçe)"
-                />
+                  placeholder="Çıkış Noktası (İlçe)"
+                >
+                  <option value="1" disabled>İlçe</option>
+                  <option value="2">Çekmeköy</option>
+                  <option value="3">Ümraniye</option>
+                </select>
+                
               </div>
               <div className="mx-auto w-[1px] h-5 bg-white"></div>
               <div className="flex flex-row md:gap-2 gap-3">
@@ -49,7 +53,7 @@ function Agree() {
                 <input
                   className="bg-inputBg rounded-lg w-full text-sm"
                   type="text"
-                  placeholder="Varış Noktası (İl, İlçe)"
+                  placeholder="Varış Noktası (İlçe)"
                 />
               </div>
               <div className="mx-auto w-[1px] h-5 bg-white"></div>
@@ -61,14 +65,6 @@ function Agree() {
                   placeholder="Varış Noktası (Açık adres)"
                 />
               </div>
-            </div>
-            <div className="flex flex-row gap-2">
-              <img className="invert w-8" src={PhoneIcon} alt="" />
-              <input
-                className="bg-inputBg rounded-lg w-full text-sm"
-                type="text"
-                placeholder="Ek İrtibat No"
-              />
             </div>
             <hr />
             <div className="flex flex-col gap-2 p-4 border rounded-lg w-fit ml-10">
