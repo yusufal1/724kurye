@@ -215,11 +215,21 @@ function LoginSignup() {
                 Onay Kodu Al
               </button>
               <input
-                type="text"
+                type="number"
                 className=" rounded-lg py-2 w-full mt-5 border-2 border-primary focus:outline-none"
                 placeholder="Onay Kodu"
               />
-              <button className="bg-primary text-white w-full py-2 mt-8 rounded-lg">Şifreyi Sıfırla</button>
+              <input
+                type="password"
+                className=" rounded-lg py-2 w-full mt-5"
+                placeholder="Yeni Şifre"
+              />
+              <input
+                type="password"
+                className=" rounded-lg py-2 w-full mt-5"
+                placeholder="Yeni Şifrenizi Doğrulayın"
+              />
+              <button className="bg-primary text-white w-full py-2 mt-8 rounded-lg">Şifreyi Kaydet</button>
             </div>
           </form>
         </div>

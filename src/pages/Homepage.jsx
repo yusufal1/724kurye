@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "../components/Header";
 import arrowRight from "../assets/arrow-right-solid.svg";
-import img1 from "../assets/resim1.jpg";
+import img1 from "../assets/undraw_futuristic_interface_re_0cm6.svg";
+import img2 from "../assets/undraw_order_delivered_re_v4ab.svg";
 import payImg2 from '../assets/pay2.svg'
 import Footer from "../components/Footer";
 
@@ -35,7 +36,7 @@ function Homepage() {
       <div className="flex flex-col-reverse gap-5 md:flex-row justify-between items-start md:items-center mt-20">
         <div className="flex-shrink-0">
           <img
-            src={img1}
+            src={img2}
             alt=""
             className="w-full md:h-auto md:max-h-96 object-contain"
           />
