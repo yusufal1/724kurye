@@ -1,5 +1,6 @@
 import './App.css';
 import Homepage from './pages/Homepage';
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 import About from './pages/About';
 import BeCourier from './pages/BeCourier';
 import Contact from './pages/Contact';
@@ -16,6 +17,7 @@ import { Route, Routes} from "react-router-dom"
 
 function App() {
   return (
+    <PayPalScriptProvider options={{ "client-id": process.env.REACT_APP_PAYPAL_CLIENT_ID }}>
     <Routes>
       <Route path='/' element={<Homepage/>}/>
       <Route path='/hakkimizda' element={<About/>}/>
@@ -31,6 +33,7 @@ function App() {
       <Route path='/cerez-politikasi' element={<CookiePolicy/>}/>
       <Route path='/sikca-sorulan-sorular' element={<Faq/>}/>
     </Routes>
+    </PayPalScriptProvider>
   );
 }
 

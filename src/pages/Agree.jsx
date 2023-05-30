@@ -5,28 +5,38 @@ import Footer from "../components/Footer";
 import GiftIcon from "../assets/gifts-solid (1).svg";
 import AvatarIcon from "../assets/avatar.jpg";
 import LocationIcon from "../assets/location-dot-solid (1).svg";
+import PaypalCheckoutButton from "../components/PaypalCheckoutButton";
 
 function Agree() {
+
+
   const location = useLocation();
 const searchParams = new URLSearchParams(location.search);
 const vehicle = searchParams.get("vehicle");
 
-const [price, setPrice] = useState(0);
+const [ucret, setUcret] = useState(0);
   const [ilce1, setIlce1] = useState("");
   const [ilce2, setIlce2] = useState("");
   const [mesafe, setMesafe] = useState(0);
+
+  const [product, setProduct] = useState({ description: "Kurye Hizmet Bedeli", price: 19 });
 
   const handleAgreement = () => {
     let calculatedPrice = 0;
     let motoStartingPrice = 34.99;
     let carStartingPrice = 59.99;
+    
     if (vehicle === "moto") {
-      calculatedPrice = (motoStartingPrice+(mesafe * 3.99)).toFixed(2);
+      calculatedPrice = (motoStartingPrice + (mesafe * 3.99)).toFixed(2);
     } else if (vehicle === "car") {
-      calculatedPrice = (carStartingPrice+(mesafe * 8.99)).toFixed(2);
+      calculatedPrice = (carStartingPrice + (mesafe * 8.99)).toFixed(2);
     }
-    setPrice(calculatedPrice);
+    
+    setUcret(calculatedPrice);
+    setProduct(prevProduct => ({ ...prevProduct, price: parseFloat(calculatedPrice) }));
   };
+
+  
 
 
 
@@ -102,7 +112,7 @@ const [price, setPrice] = useState(0);
       handleAgreement(); // Mesafe güncellendiğinde fiyatı hesapla
     } else {
       setMesafe(0);
-      setPrice(0); // Eğer ilçelerden biri seçilmediyse fiyatı sıfırla
+      setUcret(0); // Eğer ilçelerden biri seçilmediyse fiyatı sıfırla
     }
   };
 
@@ -184,13 +194,11 @@ const [price, setPrice] = useState(0);
       </div>
             {mesafe > 0 && <div className="ml-10">Mesafe: {mesafe} km</div>}
             <hr />
-            <div className="flex flex-col gap-2 p-4 border rounded-lg w-fit ml-10">
-            <span className="font-semibold text-2xl">Toplam: {price}</span>
-              <a href="/odeme"
-                className="bg-primary rounded-lg px-8 py-2 w-fit"
-              >
-                Ödeme Yap
-              </a>
+            <div className="flex flex-col gap-2 p-4  rounded-lg w-full bg-gradient-to-r from-purple-950 to-purple-500">
+            <span className="font-semibold text-2xl">Toplam: {ucret}</span>
+              <div className="paypal-button-container">
+              <PaypalCheckoutButton product={product} />
+              </div>
             </div>
             <div className="flex-flex-col space-y-4 ml-10 text-xs text-inputBg">
               <p>Fiyatlarımıza kdv dahildir.</p>
