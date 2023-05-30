@@ -62,35 +62,38 @@ export default function Header() {
           </section>
 
           <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
-            <li>
-              <a href="/" className="whitespace-nowrap">Ana Sayfa</a>
-            </li>
-            <li>
-              <a href="/hakkimizda" className="whitespace-nowrap">Hakkımızda</a>
-            </li>
-            <li>
-              <a href="/kurye-ol" className="whitespace-nowrap">Kurye Ol</a>
-            </li>
-            <li>
-              <a href="/iletisim" className="whitespace-nowrap">İletişim</a>
-            </li>
-            <li>
-              <a
-                className="bg-primary whitespace-nowrap text-white rounded-lg px-2 py-1 mx-2"
-                href="/kurye-cagir"
-              >
-                Kurye Çağır
-              </a>
-            </li>
-            <li>
-              <a
-                className="bg-secondary whitespace-nowrap text-white rounded-lg px-2 py-1 mx-2"
-                href="/giris-yap"
-              >
-                Giriş Yap
-              </a>
-            </li>
-          </ul>
+  <li>
+    <a href="/" className="whitespace-nowrap transition-colors duration-300 hover:bg-secondary hover:text-white rounded-lg px-2 py-1 mx-2">
+      Ana Sayfa
+    </a>
+  </li>
+  <li>
+    <a href="/hakkimizda" className="whitespace-nowrap transition-colors duration-300 hover:bg-secondary hover:text-white rounded-lg px-2 py-1 mx-2">
+      Hakkımızda
+    </a>
+  </li>
+  <li>
+    <a href="/kurye-ol" className="whitespace-nowrap transition-colors duration-300 hover:bg-secondary hover:text-white rounded-lg px-2 py-1 mx-2">
+      Kurye Ol
+    </a>
+  </li>
+  <li>
+    <a href="/iletisim" className="whitespace-nowrap transition-colors duration-300 hover:bg-secondary hover:text-white rounded-lg px-2 py-1 mx-2">
+      İletişim
+    </a>
+  </li>
+  <li>
+    <a href="/kurye-cagir" className="bg-primary whitespace-nowrap text-white rounded-lg px-2 py-1 mx-2">
+      Kurye Çağır
+    </a>
+  </li>
+  <li>
+    <a href="/giris-yap" className="bg-secondary whitespace-nowrap text-white rounded-lg px-2 py-1 mx-2">
+      Giriş Yap
+    </a>
+  </li>
+</ul>
+
         </nav>
         <style>{`
       .hideMenuNav {

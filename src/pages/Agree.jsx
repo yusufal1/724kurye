@@ -194,7 +194,7 @@ const [ucret, setUcret] = useState(0);
       </div>
             {mesafe > 0 && <div className="ml-10">Mesafe: {mesafe} km</div>}
             <hr />
-            <div className="flex flex-col gap-2 p-4  rounded-lg w-full bg-gradient-to-r from-purple-950 to-purple-500">
+            <div className="flex flex-col gap-2 p-4  rounded-lg w-full bg-gradient-to-r from-gray-400 to-purple-500">
             <span className="font-semibold text-2xl">Toplam: {ucret}</span>
               <div className="paypal-button-container">
               <PaypalCheckoutButton product={product} />

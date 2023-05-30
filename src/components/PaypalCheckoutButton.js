@@ -52,7 +52,7 @@ const PaypalCheckoutButton = (props) => {
         }}
         onError={(err) => {
             setError(err)
-            console.error("Paypap Checkout onError", err);
+            console.error("Paypal Checkout onError", err);
         }}
     />
 }

@@ -36,6 +36,7 @@ function Faq() {
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+  
   return (
     <>
       <div className="md:w-[80%] mx-auto min-h-screen">
@@ -45,12 +46,14 @@ function Faq() {
           {faqData.map((faq, index) => (
             <div key={index} className="mb-4 border-b">
               <button
-                className="text-lg font-semibold mb-2 focus:outline-none"
+                className={`text-lg font-semibold mb-2 focus:outline-none`}
                 onClick={() => toggleAccordion(index)}
               >
                 {faq.question}
               </button>
-              {activeIndex === index && <p>{faq.answer}</p>}
+              <p className={`overflow-hidden transition-all duration-300 max-h-0 ${activeIndex === index ? "max-h-[200px] mb-2" : "max-h-0 mb-0"}`}>
+                {faq.answer}
+              </p>
             </div>
           ))}
         </div>

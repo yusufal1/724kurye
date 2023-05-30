@@ -9,45 +9,47 @@ function Footer() {
     <div>
       <div className="flex flex-col py-5 md:flex-row justify-around bg-primary items-center mt-10">
         <div>
-          <div className="flex flex-row justify-between mt-8 mb-5 space-x-5">
-            <a href="/">
-              <img src={instagram} alt="instagram" className="w-10 invert" />
-            </a>
-            <a href="/">
-              <img src={facebook} alt="facebook" className="w-10 invert" />
-            </a>
-            <a href="/">
-              <img src={linkedin} alt="linkedin" className="w-10 invert" />
-            </a>
-            <a href="/">
-              <img src={twitter} alt="twitter" className="w-10 invert" />
-            </a>
-          </div>
+        <div className="flex flex-row justify-between mt-8 mb-5 space-x-5">
+  <a href="/" className="group">
+    <img src={instagram} alt="instagram" className="w-10 invert icon group-hover:scale-110" />
+  </a>
+  <a href="/" className="group">
+    <img src={facebook} alt="facebook" className="w-10 invert icon group-hover:scale-110" />
+  </a>
+  <a href="/" className="group">
+    <img src={linkedin} alt="linkedin" className="w-10 invert icon group-hover:scale-110" />
+  </a>
+  <a href="/" className="group">
+    <img src={twitter} alt="twitter" className="w-10 invert icon group-hover:scale-110" />
+  </a>
+</div>
+
         </div>
 
         <div className="flex flex-col items-center text-white">
-          <a href="/cerez-politikasi" className="py-2">
-            Çerez Politikası
-          </a>
-          <a href="/gizlilik-politikasi" className="py-2">
-            Gizlilik Politikası
-          </a>
-          <a href="/hakkimizda" className="py-2">
-            Hakkımızda
-          </a>
-        </div>
+  <a href="/cerez-politikasi" className="py-2 transition-all duration-300 transform hover:scale-110 hover:opacity-75">
+    Çerez Politikası
+  </a>
+  <a href="/gizlilik-politikasi" className="py-2 transition-all duration-300 transform hover:scale-110 hover:opacity-75">
+    Gizlilik Politikası
+  </a>
+  <a href="/hakkimizda" className="py-2 transition-all duration-300 transform hover:scale-110 hover:opacity-75">
+    Hakkımızda
+  </a>
+</div>
 
-        <div className="flex flex-col items-center text-white">
-          <a href="/sikca-sorulan-sorular" className="py-2">
-            Sıkça Sorulan Sorular
-          </a>
-          <a href="/iletisim" className="py-2">
-            İletişim
-          </a>
-          <a href="/kurye-ol" className="py-2">
-            Kurye Ol
-          </a>
-        </div>
+<div className="flex flex-col items-center text-white">
+  <a href="/sikca-sorulan-sorular" className="py-2 transition-all duration-300 transform hover:scale-110 hover:opacity-75">
+    Sıkça Sorulan Sorular
+  </a>
+  <a href="/iletisim" className="py-2 transition-all duration-300 transform hover:scale-110 hover:opacity-75">
+    İletişim
+  </a>
+  <a href="/kurye-ol" className="py-2 transition-all duration-300 transform hover:scale-110 hover:opacity-75">
+    Kurye Ol
+  </a>
+</div>
+
 
       </div>
       <hr />
