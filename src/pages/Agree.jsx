@@ -1,44 +1,49 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import GiftIcon from "../assets/gifts-solid (1).svg";
-import AvatarIcon from "../assets/avatar.jpg";
 import LocationIcon from "../assets/location-dot-solid (1).svg";
+import MotoIcon from "../assets/motorcycle-solid.svg";
+import CarIcon from "../assets/truck-solid.svg";
 import PaypalCheckoutButton from "../components/PaypalCheckoutButton";
 
 function Agree() {
-
-
   const location = useLocation();
-const searchParams = new URLSearchParams(location.search);
-const vehicle = searchParams.get("vehicle");
+  const searchParams = new URLSearchParams(location.search);
+  const vehicle = searchParams.get("vehicle");
+  const courierName = searchParams.get("courierName");
+  const successfullTransaction = searchParams.get("successfullTransaction");
+  const failedTransaction = searchParams.get("failedTransaction");
+  const img = decodeURIComponent(searchParams.get("img"));
 
-const [ucret, setUcret] = useState(0);
+  const [ucret, setUcret] = useState(0);
   const [ilce1, setIlce1] = useState("");
   const [ilce2, setIlce2] = useState("");
   const [mesafe, setMesafe] = useState(0);
 
-  const [product, setProduct] = useState({ description: "Kurye Hizmet Bedeli", price: 19 });
+  const [product, setProduct] = useState({
+    description: "Kurye Hizmet Bedeli",
+    price: 19,
+  });
 
   const handleAgreement = () => {
     let calculatedPrice = 0;
     let motoStartingPrice = 34.99;
     let carStartingPrice = 59.99;
-    
+
     if (vehicle === "moto") {
-      calculatedPrice = (motoStartingPrice + (mesafe * 3.99)).toFixed(2);
+      calculatedPrice = (motoStartingPrice + mesafe * 3.99).toFixed(2);
     } else if (vehicle === "car") {
-      calculatedPrice = (carStartingPrice + (mesafe * 8.99)).toFixed(2);
+      calculatedPrice = (carStartingPrice + mesafe * 8.99).toFixed(2);
     }
-    
+
     setUcret(calculatedPrice);
-    setProduct(prevProduct => ({ ...prevProduct, price: parseFloat(calculatedPrice) }));
+    setProduct((prevProduct) => ({
+      ...prevProduct,
+      price: parseFloat(calculatedPrice),
+    }));
   };
-
-  
-
-
 
   const ilceler = [
     { id: 1, name: "Adalar", latitude: 40.8763, longitude: 29.0911 },
@@ -91,7 +96,7 @@ const [ucret, setUcret] = useState(0);
     setIlce1(selectedIlceId);
     calculateAndSetMesafe(selectedIlceId, ilce2);
   };
-  
+
   const handleIlce2Change = (e) => {
     const selectedIlceId = e.target.value;
     setIlce2(selectedIlceId);
@@ -130,7 +135,7 @@ const [ucret, setUcret] = useState(0);
     const distance = R * c;
     return distance.toFixed(2);
   };
-  
+
   return (
     <>
       <div className="md:w-[80%] mx-auto min-h-screen">
@@ -143,71 +148,82 @@ const [ucret, setUcret] = useState(0);
             <div className="flex flex-row gap-2">
               <img className="invert w-8" src={GiftIcon} alt="" />
               <input
-                className="bg-inputBg rounded-lg w-full text-sm"
+                className="bg-inputBg rounded-lg w-full text-sm text-black"
                 type="text"
                 placeholder="Gönderi İçeriği (yemek, hediye, çiçek, diğer)"
               />
             </div>
             <div className="flex flex-col">
-        <div className="flex flex-row gap-2">
-          <img className="invert w-8" src={LocationIcon} alt="" />
-          <select className="bg-inputBg rounded-lg w-full text-sm text-[#6B7280]" value={ilce1} onChange={handleIlce1Change}>
-            <option value="">Çıkış Noktası (İlçe)</option>
-            {ilceler.map((ilce) => (
-              <option key={ilce.id} value={ilce.id}>
-                {ilce.name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="mx-auto w-[1px] h-5 bg-white"></div>
-        <div className="flex flex-row md:gap-2 gap-3">
-          <div className="w-8"></div>
-          <input
-            className="bg-inputBg rounded-lg w-full text-sm"
-            type="text"
-            placeholder="Çıkış Noktası (Açık adres)"
-          />
-        </div>
-      </div>
-      <div className="flex flex-col">
-        <div className="flex flex-row gap-2">
-          <img className="invert w-8" src={LocationIcon} alt="" />
-          <select className="bg-inputBg rounded-lg w-full text-sm text-[#6B7280]" value={ilce2} onChange={handleIlce2Change}>
-        <option value="">Varış Noktası (İlçe)</option>
-        {ilceler.map((ilce) => (
-          <option key={ilce.id} value={ilce.id}>
-            {ilce.name}
-          </option>
-        ))}
-      </select>
-        </div>
-        <div className="mx-auto w-[1px] h-5 bg-white"></div>
-        <div className="flex flex-row md:gap-2 gap-3">
-          <div className="w-8"></div>
-          <input
-            className="bg-inputBg rounded-lg w-full text-sm"
-            type="text"
-            placeholder="Varış Noktası (Açık adres)"
-          />
-        </div>
-      </div>
+              <div className="flex flex-row gap-2">
+                <img className="invert w-8" src={LocationIcon} alt="" />
+                <select
+                  className="bg-inputBg rounded-lg w-full text-sm text-[#6B7280]"
+                  value={ilce1}
+                  onChange={handleIlce1Change}
+                >
+                  <option value="">Çıkış Noktası (İlçe)</option>
+                  {ilceler.map((ilce) => (
+                    <option key={ilce.id} value={ilce.id}>
+                      {ilce.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="mx-auto w-[1px] h-5 bg-white"></div>
+              <div className="flex flex-row md:gap-2 gap-3">
+                <div className="w-8"></div>
+                <input
+                  className="bg-inputBg rounded-lg w-full text-sm text-black"
+                  type="text"
+                  placeholder="Çıkış Noktası (Açık adres)"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <div className="flex flex-row gap-2">
+                <img className="invert w-8" src={LocationIcon} alt="" />
+                <select
+                  className="bg-inputBg rounded-lg w-full text-sm text-[#6B7280]"
+                  value={ilce2}
+                  onChange={handleIlce2Change}
+                >
+                  <option value="">Varış Noktası (İlçe)</option>
+                  {ilceler.map((ilce) => (
+                    <option key={ilce.id} value={ilce.id}>
+                      {ilce.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="mx-auto w-[1px] h-5 bg-white"></div>
+              <div className="flex flex-row md:gap-2 gap-3">
+                <div className="w-8"></div>
+                <input
+                  className="bg-inputBg rounded-lg w-full text-sm text-black"
+                  type="text"
+                  placeholder="Varış Noktası (Açık adres)"
+                />
+              </div>
+            </div>
             {mesafe > 0 && <div className="ml-10">Mesafe: {mesafe} km</div>}
             <hr />
             <div className="flex flex-col gap-2 p-4  rounded-lg w-full bg-gradient-to-r from-gray-400 to-purple-500">
-            <span className="font-semibold text-2xl">Toplam: {ucret}</span>
+              <span className="font-semibold text-2xl">Toplam: {ucret}</span>
               <div className="paypal-button-container">
-              <PaypalCheckoutButton product={product} />
+                <PaypalCheckoutButton product={product} />
               </div>
             </div>
             <div className="flex-flex-col space-y-4 ml-10 text-xs text-inputBg">
               <p>Fiyatlarımıza kdv dahildir.</p>
               <p>
-                Gönderi oluşturma bedeli motorsiklet için 34,99TL, araba için 59,99TL'dir. Motorsiklet için km başına 3,99 TL, araba için km başına 5,99 TL ücret alınmaktadır.
+                Gönderi oluşturma bedeli motorsiklet için 34,99TL, araba için
+                59,99TL'dir. Motorsiklet için km başına 3,99 TL, araba için km
+                başına 8,99 TL ücret alınmaktadır.
               </p>
               <p>
-                Örneğin 12km uzaklıktaki bir yere göndereceğiniz ürün için motorsiklet kuryeye ödeyeceğiniz fiyat 34,99
-                + 12(3,99) = 82,87 TL'dir
+                Örneğin 12km uzaklıktaki bir yere göndereceğiniz ürün için
+                motorsiklet kuryeye ödeyeceğiniz fiyat 34,99 + 12(3,99) = 82,87
+                TL'dir
               </p>
               <p>
                 Ödeme ile ilgili herhangi bir sorun için 0850 850 8585 telefon
@@ -220,18 +236,19 @@ const [ucret, setUcret] = useState(0);
             <h1 className="font-semibold md:text-4xl text-2xl mb-5">
               Kurye Bilgileri
             </h1>
-            <img className="rounded-full w-20" src={AvatarIcon} alt="" />
-            <span className="font-semibold">Yusuf AL</span>
+            <img className="rounded-full w-20 h-20" src={img} alt="" />
+            <span className="font-semibold">{courierName}</span>
+            {vehicle === 'car' ? <img className="invert w-12" src={CarIcon} alt="" /> : <img className="invert w-12" src={MotoIcon} alt="" />}
             <div className="flex flex-col mt-5">
               <span className="font-semibold">Başarılı İşlem Sayısı</span>
               <span className="text-center text-[#24FF00] font-bold text-3xl">
-                56
+                {successfullTransaction}
               </span>
             </div>
             <div className="flex flex-col">
               <span className="font-semibold">Başarısız İşlem Sayısı</span>
               <span className="text-center text-[#DD1515] font-bold text-3xl">
-                3
+                {failedTransaction}
               </span>
             </div>
           </div>

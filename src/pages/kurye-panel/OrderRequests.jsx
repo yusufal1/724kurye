@@ -48,7 +48,8 @@ function OrderRequests() {
                 <p><span className='text-primary'>Varış Noktası:</span> Çakmak Mah. Gençtürk Sk. No:36 D:2 Ümraniye / İstanbul</p>
               </div>
           </div>
-          <button onClick={openModal} className='bg-primary text-white px-8 py-2 w-fit mt-5 rounded-lg ml-auto'>Kabul Et</button>
+            <button onClick={openModal} className='bg-red-900 text-white px-8 py-2 w-fit mt-5 rounded-lg ml-auto inline'>Reddet</button>
+            <button onClick={openModal} className='bg-primary text-white px-8 py-2 w-fit mt-5 rounded-lg ml-auto inline'>Kabul Et</button>
         </div>
         <div className="flex flex-col border border-white p-3 rounded-lg">
           <div className='flex md:flex-row flex-col justify-between gap-5'>
